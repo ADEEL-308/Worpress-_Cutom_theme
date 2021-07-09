@@ -10,7 +10,7 @@ get_header();
 ?>
 
 <div class="content">
-<?php esc_html_e('Content Index page','canva'); ?>
+   <?php esc_html_e('Single Post','canva'); ?>
 </div>
 
 <?php
