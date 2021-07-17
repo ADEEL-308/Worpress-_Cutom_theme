@@ -58,6 +58,14 @@ class CANVA_THEME
         ]);
         add_theme_support('post-thumbnails');
 
+        /**
+         * 
+         * Register Image sizes
+         * 
+         * 
+         */
+        add_image_size('featured-thumbnail',350,233,true);
+
         add_theme_support('automatic-feed-links');
 
         add_theme_support('html5',[

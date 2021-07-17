@@ -14,6 +14,7 @@ if (!defined('CANVA_DIR_URI')){
 }
 
 require_once CANVA_DIR_PATH . '/inc/helpers/autoloader.php';
+require_once CANVA_DIR_PATH . '/inc/helpers/template-tags.php';
 
 function canva_get_theme_instance(){
     \CANVA_THEME\Inc\CANVA_THEME::get_instance();
