@@ -16,7 +16,7 @@ if(have_posts(  )):
             <?php the_author()?>
             </span>
         </div>
-        <?php the_excerpt();?>
+        <?php the_content();?>
         
         </article>
       <?php  
@@ -27,17 +27,7 @@ Endif;
 ?>
 </section>
 <aside class="sidebar">
-<?php dynamic_sidebar( 'new_sidebar' ); ?>
+<?php get_sidebar(  ); ?>
 </aside>
-<div class="pagination">
-    <?php
-    // FOr next and previous pagination
-    // posts_nav_link();
-    
-    // For Numeric Pagination
-    the_posts_pagination( );
-
-    ?>
-</div>
 <?php get_footer(); ?>
     

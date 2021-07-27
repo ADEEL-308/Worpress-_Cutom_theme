@@ -15,11 +15,20 @@
     <title><?php bloginfo('name'); ?></title>
 
     <!-- StyleSheet LInk -->
-    <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
+  
     <?php wp_head(); ?>
 </head>
 
 <body <?php body_class( 'body-class'); ?>>
+
+<nav>
+    <?php
+        if(has_nav_menu('header-menu')){
+            wp_nav_menu(array('theme_loaction' =>'header-menu'));
+        }
+    ?>
+</nav>
+
 <header class="header_area">
     <h1><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
     <h3><?php bloginfo('description'); ?></h3>

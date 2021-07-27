@@ -1,0 +1,55 @@
+/* Media for view port  0px or greater*/
+
+@media(min-width:0px){
+    .main-area .banner-area .banner img{
+        height: 15rem;
+    }
+    
+    .main-area .categories a{
+        margin: 1rem 0;
+    }
+
+    .main-area .post-area{
+        margin: 0 5%;
+    }
+
+    .main-area  .post-area .col-8-lg .grid{
+        column-count: auto;
+    }
+    
+    .sidebar .latest-post .new-post .post-image{
+        width: 40%;
+    }
+
+    footer.footer-area >.row div{
+        padding-top: 5%;
+    }
+}
+
+@media (min-width:567px) {
+    
+    .main-area .banner-area .banner img{
+        height: 20rem;
+    }
+
+    .sidebar .latest-post .new-post .post-image{
+        width: 18%;
+    }
+
+    .main-area .post-area{
+        margin: 0 10%;
+    }
+}
+
+
+@media (min-width:768px){
+    .main-ara .post-area .col-8-lg .grid{
+        column-count: 2;
+    }
+}
+
+@media(min-width:1200px){
+    .sidebar .latest-post .new-post .post-image{
+        width: 88%;
+    }
+}
