@@ -1,51 +1,13 @@
 <?php
 
 // Get header file
-get_header();
+get_header('color');
 
 ?>
         
         
         <!-- Banner Area -->
-        <section class="banner-area">
-            <div class="container-fluid">
-                <div class="banner ">
-                    <!-- To add Banner image in wordpress -->
-                    <div class="ban">
-                        <?php  
-                            if(get_theme_mod('header_image')):
-                        ?>
-                        <img src="<?php echo esc_url(get_theme_mod('header_image')) ?>" alt="Banner area" class="fluid">
-                        <?php endif; ?>
-                    </div>
-                </div>
-                <div class="banner-title text-center">
-                        <?php  
-                            if(get_theme_mod('header_text_field')):
-                        ?>
-                        <h1 class="text-lg text-light">
-                            <?php  echo get_theme_mod('header_text_field') ?>
-                        </h1>
-                        
-                        <?php endif; ?>
-                        <!-- Banner Description settings -->
-                        <?php  
-                            if(get_theme_mod('header_desc_field')):
-                        ?>
-                        
-                        <span class="description text-sm text-light">
-                            <?php  echo get_theme_mod('header_desc_field') ?>
-                            
-                        </span>
-                        
-                        
-                        <?php endif; ?>
-                
-                        <!-- Simplicity -->
-
-                </div>
-            </div>
-        </section>
+        
         <!-- End Banner Area -->
         <!-- Categories Section  -->
         <seciton class="categories">
@@ -61,17 +23,45 @@ get_header();
         <section class="post-area">
             <div class="container-fluid">
                 <div class="wrapper">
+                    
                     <!-- Two Columns  Layout -->
                     <div class="row">
                         <div class="col-8-lg col-12-md">
                             <!-- Two Columns  Layout -->
-                            <div class="grid">
-                                <?php
-                                    // Load post-content in index
+                            <?php if(have_posts()):?>
+<?php while(have_posts()):the_post();?>
 
-                                    get_template_part('templates/temp/post','content');
-                                ?>
-                            </div>
+<div class="article">
+    <article class="single-post"> 
+    <div class="post-title">
+                <a href="<?php the_permalink();?>">
+                    <span class="text-lg text-dark">
+                        <?php echo the_title();?>
+                    </span>
+                </a>
+            </div>
+        <div class="post-thumbnail">
+            <?php 
+                if(has_post_thumbnail()):
+            ?>
+            <img src="<?php echo get_the_post_thumbnail_url();?>" alt="Article_image" class='fluid'>
+            <?php endif;?>
+         
+        </div>
+        <div class="post-content">
+                <p class="para">
+                    <?php echo get_the_content();?>
+                </p>
+        </div>
+        
+                                        
+    </article>
+</div>
+
+<?php endwhile;?>
+<?php  else:?>
+<?php echo wpautop( 'Sorry, No posts were found ' );?>
+<?php endif; ?>
                             <!-- Pagination Area -->
                             <div class="row">
                                 <div class="col-12-lg text-center">

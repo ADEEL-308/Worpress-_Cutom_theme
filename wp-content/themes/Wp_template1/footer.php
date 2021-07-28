@@ -9,7 +9,24 @@
                 <!-- About Me -->
                 <section class="about-me">
                     <div class="site-logo">
-                        LOGO
+                        <!-- LOGO -->
+                         <?php 
+                    
+                    if(function_exists('the_custom_logo')){
+                        
+                        the_custom_logo();
+                    }
+                    else{
+
+                        bloginfo('name'); 
+
+                    }
+                    
+                    
+                    
+                    
+                    ?>
+
                     </div>
                     <p class="para">
                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut totam doloremque adipisci suscipit
@@ -30,28 +47,11 @@
                         Recent Post
                     </a>
                     <div class="posts flex flex-row flex-wrap">
-                        <div class="column">
-                            <div class="post-image">
-                                <img src="./assets/images/2.jpg" alt="recent-post" class="fluid">
-                            </div>
-                            <div class="post-image">
-                                <img src="./assets/images/3.jpg" alt="recent-post" class="fluid">
-                            </div>
-                        </div>
-                        <div class="column">
-                            <div class="post-image">
-                                <img src="./assets/images/4.jpg" alt="recent-post" class="fluid">
-                            </div>
-                            <div class="post-image">
-                                <img src="./assets/images/5.jpg" alt="recent-post" class="fluid">
-                            </div>
-                        </div>
-                        <div class="column">
-                            <div class="post-image">
-                                <img src="./assets/images/6.jpg" alt="recent-post" class="fluid">
-                            </div>
+                        <!-- Get template file recent post -->
+                        <?php 
+                            get_template_part( 'templates/temp/recent','post' );
 
-                        </div>
+                        ?>
                     </div>
                 </section>
             </div>
@@ -60,20 +60,23 @@
                 <section class="popular-tags">
                     <a href="" class="text-md text-light">Popular Tags</a>
                     <div class="tags flex flex-row flex-wrap">
-                        <a href="#"><span>Camera</span></a>
+                        
+                        <?php get_template_part('templates/temp/post' ,'tags') ?>
+                        <!-- <a href="#"><span>Camera</span></a>
                         <a href="#"><span>Bike</span></a>
                         <a href="#"><span>Craft</span></a>
                         <a href="#"><span>Photography</span></a>
                         <a href="#"><span>Article</span></a>
                         <a href="#"><span>Events</span></a>
                         <a href="#"><span>Driving</span></a>
-                        <a href="#"><span>Wordpress</span></a>
+                        <a href="#"><span>Wordpress</span></a> -->
+
                     </div>
                 </section>
             </div>
         </div>
             <div class="rights text-center text-gray">
-                Wordpress Theme By <a href="" class="text-primary">Code Chaudhry</a>&copy;2021
+                Wordpress Theme By <a href="<?php echo home_url( '/');?>" class="text-primary">Code Chaudhry</a>&copy;<?php the_date('Y'); ?>
             </div>
     </footer>
     <!-- End Footer Area -->
@@ -81,7 +84,7 @@
     <!-- Include Jquery Script path -->
 
     <!-- Include Script path -->
-    <script src="./assets/js/main.js"></script>
+   
 </body>
 
 </html>

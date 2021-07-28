@@ -1,51 +1,13 @@
 <?php
 
 // Get header file
-get_header();
+get_header('color');
 
 ?>
         
         
         <!-- Banner Area -->
-        <section class="banner-area">
-            <div class="container-fluid">
-                <div class="banner ">
-                    <!-- To add Banner image in wordpress -->
-                    <div class="ban">
-                        <?php  
-                            if(get_theme_mod('header_image')):
-                        ?>
-                        <img src="<?php echo esc_url(get_theme_mod('header_image')) ?>" alt="Banner area" class="fluid">
-                        <?php endif; ?>
-                    </div>
-                </div>
-                <div class="banner-title text-center">
-                        <?php  
-                            if(get_theme_mod('header_text_field')):
-                        ?>
-                        <h1 class="text-lg text-light">
-                            <?php  echo get_theme_mod('header_text_field') ?>
-                        </h1>
-                        
-                        <?php endif; ?>
-                        <!-- Banner Description settings -->
-                        <?php  
-                            if(get_theme_mod('header_desc_field')):
-                        ?>
-                        
-                        <span class="description text-sm text-light">
-                            <?php  echo get_theme_mod('header_desc_field') ?>
-                            
-                        </span>
-                        
-                        
-                        <?php endif; ?>
-                
-                        <!-- Simplicity -->
-
-                </div>
-            </div>
-        </section>
+        
         <!-- End Banner Area -->
         <!-- Categories Section  -->
         <seciton class="categories">

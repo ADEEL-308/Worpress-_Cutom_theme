@@ -32,6 +32,15 @@
 
     wp_enqueue_style('media_responsive',get_template_directory_uri(  ).'./assests/css/_media.css');
 
+    // Scripts Files
+
+    wp_enqueue_script( 'jquery-file', get_template_directory_uri().'/assets/js/main.js' );
+    
+    // Scripts Files
+
+    wp_enqueue_script( 'jquery-file', get_template_directory_uri().'/assets/js/jquery.js' );
+    wp_enqueue_script( 'main-file', get_template_directory_uri().'/assets/js/main.js' );
+
 }
 
 add_action( 'wp_enqueue_scripts', 'fn_theme_scripts' );

@@ -22,7 +22,9 @@
 /* import Grid css files  */
 @import url(./assets/css/_grid.css);
 
-
+html{
+    margin-top: 0rem !important;
+}
 
 html,body{
     height: 100%;
@@ -157,11 +159,12 @@ body{
 /* Side bar Search */
 
 .sidebar .search-area{
-    padding: 8rem 0;
+    padding: 8rem 0rem;
+    
 }
 
 .sidebar .search-area .search .form-group{
-    width: 237px;
+    width: 240px;
     box-shadow: var(--box-shadow2);
 }
 
@@ -229,7 +232,7 @@ footer.footer-area .popular-tags .tags a span{
 .footer-area .social-media,
 .footer-area .recent-post,
 .footer-area .popular-tags{
-    padding-left: 1rem;
+    padding-left: 0rem;
     padding-top: .9rem;
 }
 
@@ -255,4 +258,19 @@ footer.footer-area .popular-tags .tags a span{
 footer.footer-area .popular-tags .tags a{
     margin-left: 0rem;
     margin-top: 2rem;
+}
+
+/* WOrdpress THeme styling */
+
+.post-area .single-post .post-title{
+    padding: 2rem 0;
+}
+
+.post-area .single-post .post-thumbnail img{
+    width: 60%;
+}
+
+
+.header-area .nav-color{
+    background: var(--dark);
 }
